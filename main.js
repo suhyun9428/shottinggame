@@ -3,8 +3,8 @@ let canvas;
 let ctx;
 canvas = document.createElement("canvas");
 ctx = canvas.getContext("2d");
-canvas.width = "400";
-canvas.height = "700";
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
 
 // 이미지
@@ -191,27 +191,27 @@ function render(){
 }
 
 
-canvas.addEventListener("click", e => {
-    const rect = canvas.getBoundingClientRect();
-    const point = {
-        x : e.clientX - rect.left,
-        y : e.clientY - rect.top
-    };
-});
+// canvas.addEventListener("click", e => {
+//     const rect = canvas.getBoundingClientRect();
+//     const point = {
+//         x : e.clientX - rect.left,
+//         y : e.clientY - rect.top
+//     };
+// });
 
-function handleClick(e){
-    // const color = e.target.style.backgroundColor;
-    // ctx.strokeStyle = color;
-    // ctx.fillStyle = color;
-    var x = e.pageX;
-    var y = e.pageY;
-    if(ctx.isPointInPath(path, x, y)){
-        alert("hey");
-    }else{
-        alert("bye");
-    }
+// function handleClick(e){
+//     // const color = e.target.style.backgroundColor;
+//     // ctx.strokeStyle = color;
+//     // ctx.fillStyle = color;
+//     var x = e.pageX;
+//     var y = e.pageY;
+//     if(ctx.isPointInPath(path, x, y)){
+//         alert("hey");
+//     }else{
+//         alert("bye");
+//     }
 
-}
+// }
 
 function main(){
     if(gameOver == false){
@@ -223,7 +223,7 @@ function main(){
         function showScore(ctx){
             ctx.font = `30px Arial`;
             ctx.fillStyle = `#fff`;
-            ctx.fillText(`Score : ${score}`,  150, 150);
+            ctx.fillText(`Score : ${score}`,  canvas.width / 2 - 110, 150);
         };
         showScore(ctx);
 
