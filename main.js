@@ -93,22 +93,19 @@ function Enemy(){
 
 function loadImage(){
     backgroundImage = new Image();
-    backgroundImage.src= "img/background.png";
+    backgroundImage.src= "background.png";
 
     spaceshipImage = new Image();
-    spaceshipImage.src= "img/spaceship.png";
+    spaceshipImage.src= "spaceship.png";
 
     bulletImage = new Image();
-    bulletImage.src = "img/bullet.png";
+    bulletImage.src = "bullet.png";
 
     enemyImage = new Image();
-    enemyImage.src = "img/enemy.png";
+    enemyImage.src = "enemy.png";
 
     gameoverImage = new Image();
-    gameoverImage.src = "img/gameover.png";
-
-    restartBtnImage = new Image();
-    restartBtnImage.src = "img/restartbtn.png";
+    gameoverImage.src = "gameover.png";
 }
 
 // 방향키를 누르면
